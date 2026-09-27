@@ -1,0 +1,627 @@
+/* ==========================================================================
+   PORTFOLIO MINIMALISTA — GABRIEL WILLIAN
+   Inspirado no design minimalista editorial do Figma
+   Foco em tipografia suíça, contraste puro, micro-interações e alta performance
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --bg-color: #000000;
+  --surface-color: #0a0a0c;
+  --surface-hover: #121216;
+  --border-color: #383838;
+  --border-subtle: #242424;
+  
+  --text-primary: #FFFFFF;
+  --text-secondary: #ABABAB;
+  --text-muted: #707070;
+  
+  --accent-color: #FFFFFF;
+  --tag-bg: #18181b;
+  --tag-text: #d4d4d8;
+  
+  --font-heading: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --container-max-width: 1360px;
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset Universal */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast), opacity var(--transition-fast);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   LAYOUT PRINCIPAL
+   ========================================================================== */
+
+.page-wrapper {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 40px 32px 100px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: 24px 20px 60px 20px;
+  }
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 60px;
+  width: 100%;
+}
+
+.brand-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.brand-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: var(--text-secondary);
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .brand-name, .brand-title {
+    font-size: 1.35rem;
+  }
+  .site-header {
+    padding-bottom: 36px;
+  }
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  position: relative;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   GRID DE CONTEÚDO (DUAS COLUNAS NO DESKTOP)
+   ========================================================================== */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+@media (max-width: 1080px) {
+  .content-grid {
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* ==========================================================================
+   COLUNA ESQUERDA (SIDEBAR STICKY)
+   ========================================================================== */
+
+.sidebar {
+  position: sticky;
+  top: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: static;
+  }
+}
+
+.bio-card {
+  border-top: 1px solid var(--border-color);
+  padding: 28px 24px 36px 0;
+}
+
+.bio-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+.bio-text p + p {
+  margin-top: 14px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 8px 13px 0;
+  border-top: 0.5px solid var(--border-color);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  transition: background-color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.contact-item:hover {
+  background-color: var(--surface-color);
+  padding-left: 8px;
+}
+
+.contact-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-icon-arrow {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: transform var(--transition-fast);
+}
+
+.contact-item:hover .contact-icon-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* ==========================================================================
+   COLUNA DIREITA (CONTEÚDO PRINCIPAL)
+   ========================================================================== */
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.section-block {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-color);
+  padding-top: 28px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  text-transform: capitalize;
+  margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   LISTA DE PROJETOS / CASES (EXPERIENCE)
+   ========================================================================== */
+
+.entries-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-item {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  padding: 24px 0 32px 0;
+  border-top: 0.5px solid var(--border-color);
+  transition: background-color var(--transition-fast);
+}
+
+@media (max-width: 680px) {
+  .entry-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 20px 0 28px 0;
+  }
+}
+
+.entry-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.entry-role {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.entry-company-link {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color var(--transition-fast);
+}
+
+.entry-company-link:hover {
+  color: var(--text-primary);
+}
+
+.entry-period {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.entry-badge {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 6px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.entry-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entry-description {
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.entry-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 18px;
+}
+
+.entry-bullets li {
+  list-style-type: disc;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.entry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.tech-tag {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  padding: 3px 9px;
+  background-color: #121214;
+  border: 1px solid #26262a;
+  border-radius: 4px;
+  color: #cfcfd4;
+  letter-spacing: -0.01em;
+}
+
+.project-demo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.project-demo-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   SEÇÃO DE SERVIÇOS OFERECIDOS (O QUE VOCÊ VENDE)
+   ========================================================================== */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  border: 1px solid var(--border-subtle);
+  background-color: var(--surface-color);
+  padding: 24px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.service-card:hover {
+  border-color: var(--border-color);
+  background-color: var(--surface-hover);
+}
+
+.service-icon {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.service-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.service-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   SEÇÃO SKILLS (EM COLUNAS LIMPAS)
+   ========================================================================== */
+
+.skills-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+}
+
+.skills-column-title {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.skills-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skills-column li {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skills-column li::before {
+  content: "—";
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   SEÇÃO EDUCAÇÃO & CERTIFICAÇÕES
+   ========================================================================== */
+
+.education-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 0.5px solid var(--border-color);
+}
+
+@media (max-width: 600px) {
+  .education-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+.education-school {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.education-degree {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .education-degree {
+    text-align: left;
+  }
+}
+
+/* ==========================================================================
+   FOOTER COM CTA EM DESTAQUE
+   ========================================================================== */
+
+.site-footer {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 0.5px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-cta {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity var(--transition-fast);
+}
+
+.footer-cta:hover {
+  opacity: 0.7;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   PÁGINA ABOUT
+   ========================================================================== */
+
+.about-prose {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+.about-prose p + p {
+  margin-top: 20px;
+}
+
+.about-quote {
+  border-left: 2px solid var(--text-primary);
+  padding-left: 20px;
+  margin: 28px 0;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.pillar-item {
+  border-top: 0.5px solid var(--border-color);
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pillar-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.pillar-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
