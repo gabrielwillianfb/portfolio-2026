@@ -29,7 +29,7 @@ O foco é eliminar bibliotecas desnecessárias para atingir **pontuação máxim
 │ Desenvolvedor de Software Fullstack  │ ───────────────────────────────────────────────────── │
 │                                      │ 1. Plataforma de Hiperautomação (RPA Empresarial)     │
 │ ┌──────────────────────────────────┐ │ 2. ConfixBuild — Landing Page Comercial (GSAP / React)│
-│ │ Bio: Sistemas de Informação      │ │ 3. NutriPersona AI — Micro-SaaS (Angular 20 & NestJS) │
+│ │ Bio: Sistemas de Informação      │ │ 3. NutriPersona AI — Plataforma Nutricional (Angular & Nest) │
 │ │ (UNIASSELVI) + IA Generativa     │ │ 4. Deep Learning Captcha OCR (PyTorch CRNN / 15ms)    │
 │ └──────────────────────────────────┘ │ 5. Trading AI Platform (FastAPI / XGBoost / Docker)   │
 │                                      │                                                       │
@@ -77,9 +77,9 @@ portfolio/
 2. **ConfixBuild — Landing Page Comercial ([Demo Online ↗](https://confixbuild.vercel.app/)):**
    - Interface comercial de alta conversão para o segmento de construção e reformas.
    - Animações fluidas com a biblioteca GSAP, alternância de tema Dark/Light e metodologia BEM CSS.
-3. **NutriPersona AI — Micro-SaaS & IA Nutricional:**
+3. **NutriPersona AI — Plataforma de Inteligência Nutricional:**
    - Web App interativo em Angular 20 (Signals e Standalone) com backend modular em NestJS 11.
-   - Checkout instantâneo com PIX via webhook postback e geração dinâmica de PDFs com jsPDF.
+   - Algoritmos clínicos (Mifflin-St Jeor), curadoria inteligente por IA, lista de compras e PDFs vetoriais com jsPDF.
 4. **Deep Learning Captcha OCR Engine:**
    - Modelo de Visão Computacional em PyTorch (CRNN: CNN + BiLSTM + CTC Loss).
    - Inferência de 15ms sem dependência de APIs externas pagas e gerador sintético de 100k imagens.
