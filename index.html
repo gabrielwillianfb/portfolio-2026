@@ -74,9 +74,7 @@
             <article class="entry-item">
               <div class="entry-meta">
                 <h3 class="entry-role">Plataforma de Hiperautomação Corporativa (RPA)</h3>
-                <span class="entry-company-link" style="color: var(--text-tertiary); cursor: default;">
-                  <span>Setor Financeiro & Cobrança de Ativos</span>
-                </span>
+                <span class="entry-company-text">Setor Financeiro & Cobrança de Ativos</span>
                 <span class="entry-period">Case Empresarial de Produção</span>
                 <span class="entry-badge">Arquitetura Distribuída & Alta Disponibilidade</span>
               </div>
@@ -89,7 +87,7 @@
                 </p>
                 <ul class="entry-bullets">
                   <li><strong>Orquestração Distribuída & Mensageria:</strong> Arquitetura orientada a eventos com <strong>RabbitMQ Enterprise</strong>, implementando filas com priorização dinâmica (lotes com vencimentos do dia furam a fila padrão), Dead Letter Queues (DLQ) para contenção de falhas e políticas automáticas de retry.</li>
-                  <li><strong>Cofre Central de Credenciais & Sessão Única:</strong> Integração profunda com cluster <strong>HashiCorp Vault</strong> e travas atômicas distribuídas via <strong>Redis</strong>, impedindo logins concorrentes em portais bancários (eliminando paralisações por bloqueio de contas) com controle estrito de acessos (RBAC).</li>
+                  <li><strong>Cofre Central de Credenciais & Sessão Única:</strong> Integração profunda com cluster <strong>HashiCorp Vault</strong> e travas atômicas distribuídas via <strong>Redis</strong>, impedindo logins concorrentes nos portais (eliminando paralisações por bloqueio de contas) com controle estrito de acessos (RBAC).</li>
                   <li><strong>Torre de Controle Operacional em Tempo Real:</strong> Interface em <strong>Angular 20</strong> com Angular Material e streaming contínuo via <strong>WebSockets (Socket.IO)</strong>, monitorando o progresso das tarefas de 0% a 100% em dezenas de VMs/workers distribuídos e permitindo intervenção imediata (pausar ou cancelar lotes com um clique).</li>
                   <li><strong>Motor de ROI Financeiro & Telemetria:</strong> Painel analítico executivo com <strong>ApexCharts</strong> calculando em tempo real as horas humanas poupadas e convertendo-as em valor financeiro economizado (R$), com filtros por robô, parâmetros salariais da operação e ranking dos robôs mais lucrativos.</li>
                   <li><strong>Ingestão Automatizada & Motor de "De-Para":</strong> Pipelines agendados de ETL em Python (Cron) para ingestão de remessas e motor dinâmico de mapeamento de dados com editor <strong>Monaco</strong> integrado, normalizando layouts heterogêneos de múltiplos bancos com envio automatizado de relatórios em Excel por e-mail.</li>
