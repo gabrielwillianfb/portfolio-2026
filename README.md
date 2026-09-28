@@ -71,21 +71,38 @@ portfolio/
 ## 💼 Projetos em Destaque no Portfólio
 
 1. **Plataforma Corporativa de Hiperautomação (RPA):**
-   - Orquestração de mensageria assíncrona distribuída com RabbitMQ e parque de workers/VMs.
-   - Gestão segura de credenciais integrando cluster HashiCorp Vault com controle de acesso estrito (RBAC).
-   - Dashboard executivo em tempo real com cálculo de ROI e economia de mais de 70% do tempo manual.
-2. **ConfixBuild — Landing Page Comercial ([Demo Online ↗](https://confixbuild.vercel.app/)):**
-   - Interface comercial de alta conversão para o segmento de construção e reformas.
-   - Animações fluidas com a biblioteca GSAP, alternância de tema Dark/Light e metodologia BEM CSS.
-3. **NutriPersona AI — Plataforma de Inteligência Nutricional:**
-   - Web App interativo em Angular 20 (Signals e Standalone) com backend modular em NestJS 11.
-   - Algoritmos clínicos (Mifflin-St Jeor), curadoria inteligente por IA, lista de compras e PDFs vetoriais com jsPDF.
-4. **Deep Learning Captcha OCR Engine:**
-   - Modelo de Visão Computacional em PyTorch (CRNN: CNN + BiLSTM + CTC Loss).
-   - Inferência de 15ms sem dependência de APIs externas pagas e gerador sintético de 100k imagens.
-5. **Trading AI & Quant Analytics Platform:**
-   - Backend assíncrono em Python 3.12 com FastAPI, SQLAlchemy 2.0 Async e PostgreSQL 16.
-   - Feature engineering financeiro, modelos XGBoost e travas de segurança com Kill Switch.
+   - Orquestração distribuída com **RabbitMQ Enterprise** (filas com priorização dinâmica, DLQ e retries).
+   - Cofre central de credenciais com cluster **HashiCorp Vault** e travas atômicas via **Redis** (sessão única bancária e RBAC).
+   - Torre de controle em **Angular 20** com **WebSockets (Socket.IO)** para streaming ao vivo do progresso das tarefas e intervenção imediata.
+   - Dashboard analítico executivo em **ApexCharts** com apuração de ROI em tempo real (R$ e horas humanas salvas, com >70% de redução no trabalho manual).
+   - Ingestão contínua com pipelines de ETL em Python (Cron) e motor flexível de "De-Para" de layouts bancários com Monaco Editor.
+
+2. **ConfixBuild — Landing Page Comercial ([Demo Online ↗](https://confixbuild.vercel.app/) · [GitHub ↗](https://github.com/gabrielwillianfb/ConfixBuild-Company)):**
+   - Interface comercial de alto padrão para construtoras e serviços de reforma civil focada em alta conversão no WhatsApp.
+   - Animações refinadas e micro-interações de alta precisão desenvolvidas com a biblioteca **GSAP (GreenSock)**.
+   - Alternância dinâmica entre temas Dark e Light com detecção de preferência de sistema operacional (`prefers-color-scheme`) e persistência via `localStorage`.
+   - Estilização modular com metodologia **BEM CSS** em CSS puro e arquitetura rápida em **React 18** e **Vite**.
+
+3. **NutriPersona AI — Inteligência Nutricional ([Demo Online ↗](https://gabrielwillianfb.github.io/nutripersona-ai/) · [GitHub ↗](https://github.com/gabrielwillianfb/nutripersona-ai)):**
+   - Monorepo com frontend SPA em **Angular 20** (Signals, Standalone Components e Reactive Forms) e backend modular em **NestJS 11** com Swagger OpenAPI.
+   - Quiz interativo de 5 etapas para coleta biométrica e motor clínico baseado nas equações metabólicas de **Mifflin-St Jeor** (BMR/TDEE).
+   - Algoritmo de curadoria de IA (`aiMatchReason`) que prioriza ingredientes favoritos, exclui aversões e aplica filtros rigorosos para condições clínicas (lactose, glúten, diabetes, hipertensão).
+   - Geração dinâmica de listas de feira categorizadas por corredores e exportação vetorial de planos alimentares de 30 dias em PDF via **jsPDF**.
+   - Arquitetura com fallback offline em `ApiService`, permitindo demonstração autônoma no GitHub Pages sem backend ativo.
+
+4. **Deep Learning Captcha OCR Engine ([GitHub ↗](https://github.com/gabrielwillianfb/captcha-ocr)):**
+   - Pipeline de Machine Learning e Visão Computacional ponta a ponta construído em **PyTorch 2.0+** para quebra de CAPTCHAs complexos com ruídos e sobreposição.
+   - Arquitetura híbrida **CRNN** composta por CNN de 5 blocos extratores, **BiLSTM bidirecional de 2 camadas** e perda **CTC (Connectionist Temporal Classification)** com decodificação Greedy.
+   - Pré-processamento com isolamento de canais de cor (stripping de fundos sólidos e máscaras cromáticas) e normalização para tensores 128×32.
+   - Gerador sintético multiprocessado capaz de sintetizar mais de **100.000 amostras rotuladas** com fontes variadas e distorções realistas.
+   - Modelo ultraleve de apenas **~2,2M de parâmetros**, <1,5 GB VRAM no treino e latência de **~15ms em CPU** / **~3–5ms em GPU**.
+
+5. **Trading AI & Quant Analytics Platform ([GitHub ↗](https://github.com/gabrielwillianfb/trading-ai)):**
+   - Backend assíncrono em **Python 3.12** com **FastAPI 0.115+**, **SQLAlchemy 2.0 Async** e **PostgreSQL 16 (AsyncPG)** orquestrado via **Docker Compose**.
+   - Engenharia de atributos com cálculo de **50+ indicadores técnicos quantitativos** e rotulagem estatística pelo **Triple Barrier Method** sem viés de antecipação (*look-ahead bias*).
+   - Modelos preditivos supervisionados (**XGBoost 2.1+**, Random Forest, ExtraTrees) com calibração de probabilidades (Platt / Isotonic) e validação **Walk-Forward**.
+   - Motor de backtesting event-driven com modelagem de corretagem e slippage; execução desacoplada para Paper Trading e Binance Testnet.
+   - Gestão estrita de risco (*Risk Gate*) com Stop Loss, limite de perdas diárias, Kill Switch e trava de segurança por software que proíbe trading com dinheiro real (`is_live_trading_forbidden: true`). Suíte de **94 testes automatizados**.
 
 ---
 

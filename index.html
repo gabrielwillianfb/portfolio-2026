@@ -73,32 +73,38 @@
             <!-- Case 1: Portal de Automação Corporativo -->
             <article class="entry-item">
               <div class="entry-meta">
-                <h3 class="entry-role">Plataforma de Hiperautomação (RPA)</h3>
-                <span class="entry-period">Case Corporativo Empresarial</span>
-                <span class="entry-badge">Arquitetura Distribuída</span>
+                <h3 class="entry-role">Plataforma de Hiperautomação Corporativa (RPA)</h3>
+                <span class="entry-company-link" style="color: var(--text-tertiary); cursor: default;">
+                  <span>Setor Financeiro & Cobrança de Ativos</span>
+                </span>
+                <span class="entry-period">Case Empresarial de Produção</span>
+                <span class="entry-badge">Arquitetura Distribuída & Alta Disponibilidade</span>
               </div>
               <div class="entry-details">
                 <p class="entry-description">
-                  Plataforma corporativa de alta disponibilidade para orquestração, execução e monitoramento em tempo
-                  real de robôs empresariais, desenvolvida para substituir sistemas legados e blindar processos
-                  bancários críticos.
+                  Plataforma empresarial de alta disponibilidade desenvolvida para orquestrar, executar e auditar
+                  centenas de robôs de processamento e conciliação bancária em tempo real. Projetada para substituir um
+                  portal legado, mitigando gargalos operacionais, blindando a empresa contra bloqueios de credenciais
+                  bancárias e garantindo conformidade rigorosa com a LGPD e auditorias de instituições financeiras contratantes.
                 </p>
                 <ul class="entry-bullets">
-                  <li>Orquestração de mensageria assíncrona com RabbitMQ Enterprise e filas com priorização dinâmica
-                    para parque de workers distribuídos.</li>
-                  <li>Cofre central de credenciais integrando cluster HashiCorp Vault, garantindo sessão única, controle
-                    de acesso estrito (RBAC) e conformidade com a LGPD e auditorias bancárias.</li>
-                  <li>Dashboard executivo com inteligência financeira de ROI, monitoramento de saúde das automações e
-                    métricas reais de horas humanas economizadas.</li>
-                  <li>Redução comprovada de mais de 70% do tempo gasto em digitação e conciliação manual de processos.
-                  </li>
+                  <li><strong>Orquestração Distribuída & Mensageria:</strong> Arquitetura orientada a eventos com <strong>RabbitMQ Enterprise</strong>, implementando filas com priorização dinâmica (lotes com vencimentos do dia furam a fila padrão), Dead Letter Queues (DLQ) para contenção de falhas e políticas automáticas de retry.</li>
+                  <li><strong>Cofre Central de Credenciais & Sessão Única:</strong> Integração profunda com cluster <strong>HashiCorp Vault</strong> e travas atômicas distribuídas via <strong>Redis</strong>, impedindo logins concorrentes em portais bancários (eliminando paralisações por bloqueio de contas) com controle estrito de acessos (RBAC).</li>
+                  <li><strong>Torre de Controle Operacional em Tempo Real:</strong> Interface em <strong>Angular 20</strong> com Angular Material e streaming contínuo via <strong>WebSockets (Socket.IO)</strong>, monitorando o progresso das tarefas de 0% a 100% em dezenas de VMs/workers distribuídos e permitindo intervenção imediata (pausar ou cancelar lotes com um clique).</li>
+                  <li><strong>Motor de ROI Financeiro & Telemetria:</strong> Painel analítico executivo com <strong>ApexCharts</strong> calculando em tempo real as horas humanas poupadas e convertendo-as em valor financeiro economizado (R$), com filtros por robô, parâmetros salariais da operação e ranking dos robôs mais lucrativos.</li>
+                  <li><strong>Ingestão Automatizada & Motor de "De-Para":</strong> Pipelines agendados de ETL em Python (Cron) para ingestão de remessas e motor dinâmico de mapeamento de dados com editor <strong>Monaco</strong> integrado, normalizando layouts heterogêneos de múltiplos bancos com envio automatizado de relatórios em Excel por e-mail.</li>
+                  <li><strong>Impacto Operacional Comprovado:</strong> Redução de mais de 70% do tempo gasto em digitação e conciliação manual de processos, suportando o dobro do volume operacional sem contratação de novos operadores.</li>
                 </ul>
                 <div class="entry-tags">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">Angular</span>
-                  <span class="tech-tag">RabbitMQ</span>
+                  <span class="tech-tag">Angular 20</span>
+                  <span class="tech-tag">NestJS 11</span>
+                  <span class="tech-tag">RabbitMQ Enterprise</span>
                   <span class="tech-tag">HashiCorp Vault</span>
-                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Redis Locks</span>
+                  <span class="tech-tag">PostgreSQL & TypeORM</span>
+                  <span class="tech-tag">Socket.IO WebSockets</span>
+                  <span class="tech-tag">ApexCharts</span>
+                  <span class="tech-tag">Python ETL</span>
                   <span class="tech-tag">Docker</span>
                 </div>
               </div>
@@ -118,59 +124,85 @@
               </div>
               <div class="entry-details">
                 <p class="entry-description">
-                  Página institucional e comercial de alta conversão projetada para construtoras e serviços de reforma,
-                  focada em velocidade de carregamento mobile, design refinado e atração de leads qualificados.
+                  Página institucional e comercial de alto padrão desenvolvida sob medida para construtoras e serviços
+                  de reforma civil. Projetada com foco em máxima retenção de visitantes, estética editorial moderna,
+                  carregamento instantâneo em conexões móveis e direcionamento estratégico para captação de leads qualificados no WhatsApp.
                 </p>
                 <ul class="entry-bullets">
-                  <li>Micro-interações e animações elegantes implementadas com a biblioteca GSAP (GreenSock).</li>
-                  <li>Alternância fluida entre tema Dark e Light com detecção automática e persistência de preferência
-                    do usuário.</li>
-                  <li>Estilização modular e estruturada utilizando metodologia BEM CSS para máxima manutenibilidade.
-                  </li>
-                  <li>Carregamento ultrarrápido otimizado para navegadores mobile e desktop.</li>
+                  <li><strong>Animações Fluidas com GSAP:</strong> Implementação de transições suaves de entrada, efeitos de revelação em elementos visuais e micro-interações de alta precisão com <strong>GreenSock (GSAP)</strong>, transmitindo autoridade e sofisticação arquitetônica.</li>
+                  <li><strong>Alternância Dinâmica Dark/Light Theme:</strong> Seletor de temas com zero cintilação (FOUC), utilizando script inline que detecta a preferência do sistema operacional (<code>prefers-color-scheme</code>) e sincroniza a escolha no <code>localStorage</code> via atributos semânticos (<code>data-theme</code>).</li>
+                  <li><strong>Arquitetura Modular com BEM CSS:</strong> Estilização modular e consistente utilizando a metodologia Block-Element-Modifier em CSS puro, assegurando isolamento de componentes, semântica limpa e facilidade de manutenção sem sobrecarga de frameworks.</li>
+                  <li><strong>Performance Mobile & SEO:</strong> Arquitetura SPA moderna com <strong>React 18</strong> e <strong>Vite</strong>, otimizada para pontuações elevadas no Google Lighthouse, carregamento de assets compactados e chamadas estratégicas para ação (CTA).</li>
                 </ul>
                 <div class="entry-tags">
-                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">React 18</span>
                   <span class="tech-tag">Vite</span>
-                  <span class="tech-tag">GSAP</span>
+                  <span class="tech-tag">GSAP (GreenSock)</span>
                   <span class="tech-tag">BEM CSS</span>
+                  <span class="tech-tag">Dark/Light Mode</span>
+                  <span class="tech-tag">Design Responsivo</span>
                   <span class="tech-tag">Vercel</span>
                 </div>
-                <a href="https://confixbuild.vercel.app/" target="_blank" rel="noopener noreferrer"
-                  class="project-demo-btn">
-                  Ver Projeto no Ar ↗
-                </a>
+                <div class="project-actions">
+                  <a href="https://confixbuild.vercel.app/" target="_blank" rel="noopener noreferrer"
+                    class="project-demo-btn">
+                    Ver Projeto no Ar ↗
+                  </a>
+                  <a href="https://github.com/gabrielwillianfb/ConfixBuild-Company" target="_blank" rel="noopener noreferrer"
+                    class="project-github-btn">
+                    Código no GitHub ↗
+                  </a>
+                </div>
               </div>
             </article>
 
             <!-- Case 3: NutriPersona AI — Inteligência Nutricional -->
             <article class="entry-item">
               <div class="entry-meta">
-                <h3 class="entry-role">NutriPersona AI — Plataforma Nutricional</h3>
+                <h3 class="entry-role">NutriPersona AI — Inteligência Nutricional</h3>
+                <a href="https://gabrielwillianfb.github.io/nutripersona-ai/" target="_blank" rel="noopener noreferrer"
+                  class="entry-company-link">
+                  <span>gabrielwillianfb.github.io/nutripersona-ai</span>
+                  <span>↗</span>
+                </a>
                 <span class="entry-period">Aplicação Web Fullstack</span>
                 <span class="entry-badge">IA & Algoritmos Clínicos</span>
               </div>
               <div class="entry-details">
                 <p class="entry-description">
-                  Plataforma web ponta a ponta desenvolvida em Angular 20 e NestJS 11 que cruza dados biométricos,
-                  preferências de paladar e orçamento de supermercado com algoritmos clínicos e curadoria de IA para gerar
-                  cardápios balanceados e listas inteligentes.
+                  Plataforma web ponta a ponta (Monorepo) concebida para resolver o problema de dietas genéricas da internet.
+                  A aplicação cruza dados biométricos, rotina diária, preferências de paladar e orçamento de supermercado
+                  através de equações metabólicas clínicas e curadoria automatizada por IA, gerando cardápios balanceados de 30 dias
+                  com justificativas analíticas e lista de compras inteligente.
                 </p>
                 <ul class="entry-bullets">
-                  <li>Quiz interativo em 5 etapas desenvolvido em Angular 20 com Signals, Standalone Components
-                    e validação reativa com Reactive Forms.</li>
-                  <li>Motor de inteligência nutricional em NestJS 11 com cálculos de BMR/TDEE (Mifflin-St Jeor) e curadoria
-                    automatizada que prioriza ingredientes favoritos e elimina aversões/alérgenos.</li>
-                  <li>Geração de lista de supermercado categorizada por corredores, com escala adaptada à frequência de compras.</li>
-                  <li>Exportação dinâmica de relatórios vetoriais e guias de 30 dias em PDF via jsPDF, além de arquitetura com fallback offline.</li>
+                  <li><strong>Quiz Interativo em 5 Etapas (Angular 20):</strong> Interface reativa construída com <strong>Angular Signals</strong>, <strong>Standalone Components</strong> e <strong>Reactive Forms</strong>, conduzindo o usuário por um fluxo fluido de coleta de biometria, metas corporais, aversões e restrições alimentares com validação instantânea.</li>
+                  <li><strong>Motor Metabólico Clínico (NestJS 11):</strong> Backend modular com TypeScript e Swagger OpenAPI que calcula a Taxa Metabólica Basal (BMR) e o Gasto Calórico Diário (TDEE) via equações de <strong>Mifflin-St Jeor</strong>, calibrando déficits ou superávits ideais com proporções balanceadas de macronutrientes.</li>
+                  <li><strong>Filtros Estritos de Segurança & Scoring de IA:</strong> Exclusão matemática de ingredientes rejeitados e alérgenos clínicos (Sem Glúten, Zero Lactose, Diabetes, Hipertensão, Vegano/Vegetariano), combinada a algoritmo de pontuação que prioriza receitas com ingredientes favoritos e gera justificativa analítica (<code>aiMatchReason</code>).</li>
+                  <li><strong>Lista de Supermercado Otimizada por Corredores:</strong> Insumos agrupados por seções de supermercado (hortifrúti, açougue, secos, laticínios), com escalonamento automático de volumes conforme a frequência de feira (semanal, quinzenal ou mensal).</li>
+                  <li><strong>Exportação Vetorial em PDF & Resiliência Offline:</strong> Geração programática de relatórios consolidados e fichas de preparo via <strong>jsPDF</strong>, complementada por arquitetura no frontend com modo fallback offline em <code>ApiService</code>, garantindo funcionamento autônomo na demonstração do GitHub Pages.</li>
+                  <li><strong>Design System Editorial Dark (WCAG AAA):</strong> Interface desenvolvida em CSS puro com tokens HSL, glassmorphism e alto contraste visual. Projeto 100% gratuito e de código aberto.</li>
                 </ul>
                 <div class="entry-tags">
                   <span class="tech-tag">Angular 20</span>
                   <span class="tech-tag">NestJS 11</span>
                   <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Mifflin-St Jeor</span>
                   <span class="tech-tag">jsPDF</span>
-                  <span class="tech-tag">Algoritmos Clínicos</span>
-                  <span class="tech-tag">Design System</span>
+                  <span class="tech-tag">Swagger OpenAPI</span>
+                  <span class="tech-tag">Signals</span>
+                  <span class="tech-tag">WCAG AAA</span>
+                  <span class="tech-tag">GitHub Pages</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://gabrielwillianfb.github.io/nutripersona-ai/" target="_blank" rel="noopener noreferrer"
+                    class="project-demo-btn">
+                    Ver Projeto no Ar ↗
+                  </a>
+                  <a href="https://github.com/gabrielwillianfb/nutripersona-ai" target="_blank" rel="noopener noreferrer"
+                    class="project-github-btn">
+                    Código no GitHub ↗
+                  </a>
                 </div>
               </div>
             </article>
@@ -179,29 +211,43 @@
             <article class="entry-item">
               <div class="entry-meta">
                 <h3 class="entry-role">Deep Learning Captcha OCR Engine</h3>
-                <span class="entry-period">Visão Computacional</span>
-                <span class="entry-badge">IA & Automação</span>
+                <a href="https://github.com/gabrielwillianfb/captcha-ocr" target="_blank" rel="noopener noreferrer"
+                  class="entry-company-link">
+                  <span>github.com/gabrielwillianfb/captcha-ocr</span>
+                  <span>↗</span>
+                </a>
+                <span class="entry-period">Visão Computacional & Deep Learning</span>
+                <span class="entry-badge">PyTorch 2.0+ · CRNN · Inferência 15ms</span>
               </div>
               <div class="entry-details">
                 <p class="entry-description">
-                  Solução de Visão Computacional e Deep Learning em PyTorch especializada no reconhecimento ultrarrápido
-                  de CAPTCHAs ruidosos com linhas sobrepostas, dispensando o custo recorrente de APIs de quebra
-                  terceiras.
+                  Pipeline completo de Machine Learning e Visão Computacional em PyTorch para reconhecimento óptico
+                  de caracteres (OCR) em CAPTCHAs complexos com ruídos de fundo, linhas cortantes, distorções de fonte e
+                  deslocamento vertical de baseline (subscrito/sobrescrito), eliminando custos e latência de APIs terceiras de resolução.
                 </p>
                 <ul class="entry-bullets">
-                  <li>Arquitetura CRNN composta por CNN de 5 blocos extratores, BiLSTM bidirecional de 2 camadas e perda
-                    CTC (Connectionist Temporal Classification).</li>
-                  <li>Pipeline de geração de datasets sintéticos com multiprocessing capaz de renderizar e rotular mais
-                    de 100.000 imagens realistas.</li>
-                  <li>Velocidade de inferência extrema de ~15ms em CPU e ~3-5ms em GPU, viabilizando automações massivas
-                    em tempo real.</li>
+                  <li><strong>Arquitetura Híbrida CRNN (End-to-End):</strong> Combinação de um extrator espacial <strong>CNN de 5 blocos</strong> convolucionais (mapa de atributos C=512, H=1, W=32), camada de transdução Map-to-Sequence, <strong>BiLSTM bidirecional de 2 camadas</strong> para capturar dependências temporais contextuais e projeção linear com <strong>CTC Loss (Connectionist Temporal Classification)</strong> e Greedy Decoding.</li>
+                  <li><strong>Alinhamento Dinâmico sem Bounding Boxes:</strong> Elimina por completo a necessidade de segmentação manual ou delimitação de caixas para cada caractere, decodificando a sequência de texto completa mesmo quando as letras se encontram fusionadas ou inclinadas.</li>
+                  <li><strong>Pré-processamento com Filtros de Canais de Cor:</strong> Pipeline de isolamento e binarização adaptativa para descarte de fundos sólidos e remoção de ruídos cromáticos (ex: stripping de máscaras `#FF0000`), convertendo imagens de 112×35 px em tensores normalizados de 128×32 de canal único.</li>
+                  <li><strong>Gerador de Datasets Sintéticos com Multiprocessing:</strong> Script Python com processamento concorrente capaz de renderizar e rotular mais de <strong>100.000 imagens sintéticas</strong> hiper-realistas com fontes TrueType variadas, rotações, ruídos elípticos e oscilação de baseline para treinamento sem custo humano de anotação.</li>
+                  <li><strong>Eficiência Computacional Extrema:</strong> Modelo ultraleve com apenas <strong>~2,2 milhões de parâmetros</strong>, consumo de memória de vídeo inferior a <strong>1,5 GB VRAM</strong> durante o treino e tempo de inferência de <strong>~3–5ms em GPU</strong> e <strong>~15ms em CPU</strong>.</li>
+                  <li><strong>Treinamento & Métricas de Avaliação:</strong> Loop de treino com Automatic Mixed Precision (AMP), Gradient Clipping, Cosine Annealing Scheduler e avaliação contínua via Character Error Rate (CER), Levenshtein Distance e Exact Match accuracy.</li>
                 </ul>
                 <div class="entry-tags">
-                  <span class="tech-tag">PyTorch</span>
+                  <span class="tech-tag">PyTorch 2.0+</span>
                   <span class="tech-tag">Deep Learning</span>
-                  <span class="tech-tag">Python</span>
                   <span class="tech-tag">CRNN</span>
                   <span class="tech-tag">CTC Loss</span>
+                  <span class="tech-tag">BiLSTM</span>
+                  <span class="tech-tag">Visão Computacional</span>
+                  <span class="tech-tag">Multiprocessing ETL</span>
+                  <span class="tech-tag">Python</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/gabrielwillianfb/captcha-ocr" target="_blank" rel="noopener noreferrer"
+                    class="project-github-btn">
+                    Código no GitHub ↗
+                  </a>
                 </div>
               </div>
             </article>
@@ -210,28 +256,43 @@
             <article class="entry-item">
               <div class="entry-meta">
                 <h3 class="entry-role">Trading AI & Quant Analytics Platform</h3>
-                <span class="entry-period">Engenharia de Dados</span>
-                <span class="entry-badge">Async Backend & ML</span>
+                <a href="https://github.com/gabrielwillianfb/trading-ai" target="_blank" rel="noopener noreferrer"
+                  class="entry-company-link">
+                  <span>github.com/gabrielwillianfb/trading-ai</span>
+                  <span>↗</span>
+                </a>
+                <span class="entry-period">Finanças Quantitativas & ML Assíncrono</span>
+                <span class="entry-badge">Python 3.12 · FastAPI · PostgreSQL 16 · XGBoost</span>
               </div>
               <div class="entry-details">
                 <p class="entry-description">
-                  Plataforma quantitativa orientada a dados para coleta em tempo real, engenharia de atributos
-                  financeiros e validação estrita de modelos preditivos com travas de segurança de gestão de risco.
+                  Plataforma quantitativa orientada a dados para coleta em tempo real de séries temporais de mercado,
+                  engenharia de atributos financeiros, rotulagem estatística sem viés de antecipação (<em>look-ahead bias</em>) e
+                  validação rigorosa de modelos de Machine Learning com travas de segurança e simulação paper trading.
                 </p>
                 <ul class="entry-bullets">
-                  <li>Backend assíncrono em Python 3.12 com FastAPI, SQLAlchemy 2.0 Async e persistência em PostgreSQL
-                    16.</li>
-                  <li>Pipeline de engenharia de features e treinamento preditivo utilizando algoritmos de gradient
-                    boosting (XGBoost).</li>
-                  <li>Validação walk-forward com simulação paper trading e kill switch automático acionado em cenários
-                    de risco.</li>
+                  <li><strong>Backend Assíncrono de Alta Performance:</strong> Construído em <strong>Python 3.12</strong> com <strong>FastAPI 0.115+</strong>, <strong>SQLAlchemy 2.0 Async</strong> e persistência otimizada com <strong>PostgreSQL 16 (AsyncPG)</strong> orquestrado via <strong>Docker Compose</strong>.</li>
+                  <li><strong>Engenharia de Atributos & Rotulagem Triple Barrier:</strong> Pipeline automatizado que calcula mais de <strong>50 indicadores técnicos quantitativos</strong> (médias móveis, RSI, MACD, Bandas de Bollinger, ATR, osciladores de volatilidade e regimes de mercado) e aplica a metodologia de <strong>Triple Barrier</strong> para rotulagem de alvos sem vazamento de dados futuros.</li>
+                  <li><strong>Modelagem Preditiva com Calibração de Probabilidades:</strong> Treinamento supervisionado com algoritmos de gradient boosting (<strong>XGBoost 2.1+</strong>, Random Forest, ExtraTrees), validação temporal estrita via <strong>Walk-Forward Cross-Validation</strong> e calibração fina de probabilidades (Platt Scaling e Regressão Isotônica).</li>
+                  <li><strong>Motor de Backtesting Event-Driven:</strong> Simulação barra a barra contemplando taxas de corretagem e impacto de derrapagem (<em>slippage</em>), gerando relatórios quantitativos com Índice de Sharpe, Índice de Sortino, Drawdown Máximo e Win Rate. Motores desacoplados para Paper Trading em memória e sandbox na Testnet da Binance.</li>
+                  <li><strong>Governança de Risco & Segurança Estrita:</strong> Módulo de conformidade (<em>Risk Gate</em>) com validação pré-execução de ordens, Stop Loss automático, limites de perda diária e <strong>Kill Switch</strong> imediato. Validação estrita via <strong>Pydantic Settings v2</strong> que aborta a inicialização se qualquer modo de produção real for detectado (<code>is_live_trading_forbidden: true</code>).</li>
+                  <li><strong>Qualidade & Cobertura de Testes:</strong> Suíte com <strong>94 testes automatizados</strong> passando com <code>pytest-asyncio</code> e <code>aiosqlite</code>, além de sanitizador ativo de logs contra vazamento de credenciais.</li>
                 </ul>
                 <div class="entry-tags">
                   <span class="tech-tag">Python 3.12</span>
                   <span class="tech-tag">FastAPI</span>
                   <span class="tech-tag">PostgreSQL 16</span>
-                  <span class="tech-tag">XGBoost</span>
-                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">XGBoost 2.1+</span>
+                  <span class="tech-tag">SQLAlchemy 2.0 Async</span>
+                  <span class="tech-tag">Docker Compose</span>
+                  <span class="tech-tag">Walk-Forward</span>
+                  <span class="tech-tag">Pytest (94 testes)</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/gabrielwillianfb/trading-ai" target="_blank" rel="noopener noreferrer"
+                    class="project-github-btn">
+                    Código no GitHub ↗
+                  </a>
                 </div>
               </div>
             </article>
